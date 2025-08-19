@@ -6,7 +6,7 @@ import sparkles from "./assets/sparkles.png";
 function App() {
   return (
     <Stack alignItems="center">
-      {/* Top page */}
+      {/* Top page - words then picture */}
       <Stack
         direction="row"
         justifyContent="center"
@@ -14,7 +14,8 @@ function App() {
         height="100vh"
         p={10}
       >
-        <Stack spacing={4}>
+        <Stack spacing={6}>
+          {/* Main intro */}
           <Stack alignItems="center">
             <Typography variant="h6" textAlign="center">
               Let me introduce myself as
@@ -31,31 +32,34 @@ function App() {
             />
           </Stack>
 
-          <Stack direction="row" position="relative">
-            <Typography variant="h6" textAlign="center">
-              I can turn mess into magic with a touch of class and a whole lot
-              of <i>sparkle</i>.
-            </Typography>
+          {/* Turn mess into magic + sparkles */}
+          <Stack direction="row">
+            <Stack>
+              <Typography variant="h6">I can turn mess into magic</Typography>
+              <Typography variant="h6">with a touch of class</Typography>
+              <Typography variant="h6">
+                and a whole lot of <i>sparkle</i>.
+              </Typography>
+            </Stack>
             <img
               src={sparkles}
               alt="sparkles"
               style={{
-                width: "100px",
-                position: "absolute",
-                right: -50,
-                top: 12,
+                height: 100,
               }}
             />
           </Stack>
 
-          <Typography variant="h6">
-            Your space deserves the royal treatment.
-          </Typography>
-
-          <Typography variant="h6">
-            Don’t be shy — reach out and let’s make your place irresistibly
-            clean.
-          </Typography>
+          {/* Your space deserves */}
+          <Stack>
+            <Typography variant="h6" textAlign="right">
+              Your space deserves the royal treatment.
+            </Typography>
+            <Typography variant="h6" textAlign="right">
+              Don’t be shy — reach out and let’s make your place irresistibly
+              clean.
+            </Typography>
+          </Stack>
         </Stack>
 
         <img
@@ -66,7 +70,6 @@ function App() {
           }}
         />
       </Stack>
-      {/* More info section */}
     </Stack>
   );
 }
