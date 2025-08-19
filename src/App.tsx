@@ -1,74 +1,62 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, useMediaQuery } from "@mui/material";
 import kweenFullBody from "./assets/kween-full-body.png";
+import fullBodyWithWords from "./assets/full-body-with-words.png";
 import kleaningKweenWords from "./assets/kleaning-kween-words.png";
 import sparkles from "./assets/sparkles.png";
 
 function App() {
+  const isMobile = useMediaQuery("(max-width:900px)");
+
   return (
-    <Stack alignItems="center">
-      {/* Top page - words then picture */}
-      <Stack
-        direction="row"
-        justifyContent="center"
-        spacing={2}
-        height="100vh"
-        p={10}
-      >
-        <Stack spacing={6}>
-          {/* Main intro */}
-          <Stack alignItems="center">
-            <Typography variant="h6" textAlign="center">
-              Let me introduce myself as
-            </Typography>
-            <Typography variant="h5" textAlign="center">
-              <i>the</i>
-            </Typography>
-            <img
-              src={kleaningKweenWords}
-              alt="Kleaning Kween"
-              style={{
-                width: "20vw",
-              }}
-            />
-          </Stack>
-
-          {/* Turn mess into magic + sparkles */}
-          <Stack direction="row">
-            <Stack>
-              <Typography variant="h6">I can turn mess into magic</Typography>
-              <Typography variant="h6">with a touch of class</Typography>
-              <Typography variant="h6">
-                and a whole lot of <i>sparkle</i>.
-              </Typography>
-            </Stack>
-            <img
-              src={sparkles}
-              alt="sparkles"
-              style={{
-                height: 100,
-              }}
-            />
-          </Stack>
-
-          {/* Your space deserves */}
-          <Stack>
-            <Typography variant="h6" textAlign="right">
-              Your space deserves the royal treatment.
-            </Typography>
-            <Typography variant="h6" textAlign="right">
-              Don’t be shy — reach out and let’s make your place irresistibly
-              clean.
-            </Typography>
-          </Stack>
-        </Stack>
-
+    <Stack minHeight="100vh" p={3} justifyContent="space-between">
+      {isMobile && (
         <img
-          src={kweenFullBody}
+          src={fullBodyWithWords}
           alt="The Kleaning Kween"
           style={{
-            height: "80vh",
+            width: "100%",
           }}
         />
+      )}
+
+      {/* Turn mess into magic + sparkles */}
+      <Stack direction="row" justifyContent="center" textAlign="center">
+        <Stack>
+          <Typography>
+            I can turn <b>mess into magic</b>
+          </Typography>
+          <Typography>
+            with a touch of <b>class</b>
+          </Typography>
+          <Typography>
+            and a whole lot of{" "}
+            <b>
+              <i>sparkle</i>
+            </b>
+            .
+          </Typography>
+        </Stack>
+        <img
+          src={sparkles}
+          alt="sparkles"
+          style={{
+            width: 75,
+          }}
+        />
+      </Stack>
+
+      {/* Your space deserves */}
+      <Stack spacing={1} textAlign="center" mb={8}>
+        <Typography>
+          Your space deserves the <b>royal treatment</b>.
+        </Typography>
+        <Typography>
+          Don’t be shy — reach out and let’s make your place{" "}
+          <b>
+            <i>irresistibly</i> clean
+          </b>
+          .
+        </Typography>
       </Stack>
     </Stack>
   );
