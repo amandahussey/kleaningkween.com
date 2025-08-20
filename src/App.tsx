@@ -1,4 +1,10 @@
-import { Stack, ThemeProvider, Typography, useMediaQuery } from "@mui/material";
+import {
+  Stack,
+  ThemeProvider,
+  Link,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 
 import fullBodyWithWords from "./assets/full-body-with-words.png";
 import sparkles from "./assets/sparkles.png";
@@ -67,7 +73,7 @@ function App() {
           </Typography>
 
           {/* Don't be shy */}
-          <Stack textAlign="center">
+          <Stack textAlign="center" spacing={3}>
             <Typography>
               Don’t be shy — reach out and let’s make your place{" "}
               <b>
@@ -75,6 +81,9 @@ function App() {
               </b>
               .
             </Typography>
+            <Link variant="subtitle1" href="tel:847-372-7536" color="#682EAB">
+              (847) 372-7536
+            </Link>
           </Stack>
         </Stack>
       </Stack>
