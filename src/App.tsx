@@ -56,7 +56,6 @@ function App() {
               alt="sparkles"
               style={{
                 width: 75,
-                height: "fit-content",
                 alignSelf: "flex-end",
               }}
             />
