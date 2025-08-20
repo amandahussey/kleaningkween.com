@@ -75,7 +75,7 @@ function App() {
           {/* Don't be shy */}
           <Stack textAlign="center" spacing={3}>
             <Typography>
-              Don’t be shy — reach out and let’s make your place{" "}
+              Don’t be shy! Call or text and let’s make your place{" "}
               <b>
                 <i>irresistibly</i> clean
               </b>
