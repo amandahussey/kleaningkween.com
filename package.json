@@ -2,7 +2,6 @@
   "name": "kleaningkween.com",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://amandahussey.github.io/kleaningkween.com/",
   "type": "module",
   "scripts": {
     "dev": "vite",
