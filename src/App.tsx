@@ -32,7 +32,7 @@ function App() {
         {/* All Text */}
         <Stack
           justifyContent={isMobile ? "space-between" : "center"}
-          spacing={isMobile ? 3 : 6}
+          spacing={6}
         >
           {/* Turn mess into magic + sparkles */}
           <Stack direction="row" justifyContent="center" textAlign="center">
