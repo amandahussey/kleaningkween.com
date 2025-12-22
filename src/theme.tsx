@@ -2,7 +2,7 @@ import { createTheme } from "@mui/material";
 
 export const theme = createTheme({
   typography: {
-    fontFamily: ["Forum", "serif"].join(","),
+    fontFamily: ["Montserrat Alternates", "serif"].join(","),
     fontSize: 20,
   },
   components: {
