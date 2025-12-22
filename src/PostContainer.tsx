@@ -1,4 +1,5 @@
 import { Container, Stack, Typography } from "@mui/material";
+import sparkles from "./assets/sparkles.png";
 
 function PostContainer({
   title,
@@ -18,7 +19,17 @@ function PostContainer({
         textAlign="center"
       >
         <Typography variant="h4">{title}</Typography>
-        {description && <Typography>{description}</Typography>}
+        <Stack direction="row" spacing={1} alignItems="flex-end">
+          {description && <Typography>{description}</Typography>}
+          <img
+            src={sparkles}
+            alt="sparkles"
+            style={{
+              width: 36,
+            }}
+          />
+        </Stack>
+
         {Array.isArray(children) ? (
           <Stack spacing={2}>
             {children.map((child, index) => (
