@@ -5,6 +5,8 @@ import sparkles from "./assets/sparkles.png";
 
 function App() {
   const isMobile = useMediaQuery("(max-width:900px)");
+  const isSm = useMediaQuery("(max-width:458px)");
+  console.log(isMobile, isSm);
 
   return (
     <Stack
@@ -23,6 +25,7 @@ function App() {
           width: isMobile ? "100%" : undefined,
           height: isMobile ? undefined : "80vw",
           maxHeight: 900,
+          objectFit: "contain",
         }}
       />
 
@@ -32,7 +35,8 @@ function App() {
         <Stack direction="row" justifyContent="center" textAlign="center">
           <Stack>
             <Typography>
-              I can turn <b>mess into magic</b>
+              I can turn {isSm ? <br /> : ""}
+              <b>mess into magic</b>
             </Typography>
             <Typography>
               with a touch of <b>class</b>
