@@ -24,7 +24,7 @@ function App() {
         style={{
           width: isMobile ? "100%" : undefined,
           height: isMobile ? undefined : "80vw",
-          maxHeight: 900,
+          maxHeight: "80vh",
           objectFit: "contain",
         }}
       />
