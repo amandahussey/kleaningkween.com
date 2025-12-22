@@ -113,12 +113,12 @@ function Nav() {
               anchorEl={anchorElTipsAndTricks}
               anchorOrigin={{
                 vertical: "top",
-                horizontal: "right",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
                 vertical: "top",
-                horizontal: "right",
+                horizontal: "left",
               }}
               open={Boolean(anchorElTipsAndTricks)}
               onClose={handleCloseTipsAndTricks}
