@@ -73,7 +73,7 @@ function App() {
             </b>
             .
           </Typography>
-          <Link variant="subtitle1" href="tel:847-372-7536" color="#682EAB">
+          <Link variant="subtitle1" href="tel:847-372-7536">
             (847) 372-7536
           </Link>
         </Stack>
